@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="css/source-sans-pro.js"></script>
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>Open Orders</h1></div>
+    <div class='search-bar'><input class='search-key' type="search"/></div>
+    <div class="scroll"><ul class='employee-list'></ul></div>
+</script>
+<script id="order-li-tpl" type="text/x-handlebars-template">
+    {{#.}}
+    <li><a href="#order/{{this.order_id}}">{{date_added}} - ({{products.length}} item(s))<br/>{{this.customer}} - {{status}} <br/>{{this.total}} {{this.currency_code}}</a></li>
+    {{/.}}
+</script>
+<script id="order-tpl" type="text/x-handlebars-template">
+    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Order Details</h1></div>
+    <div class='details'>
+        <h1>Order for <i>{{this.customer}}</i> placed on {{date_added}}</h1>
+        <h2>{{products.length}} item(s) to check.</h2>      
+		<div>
+			{{#each products}}
+				<img src="http://localhost/image/{{image}}" /><br/>
+				<h4>{{name}} - €{{price}} - Quantity:{{product_quantity}}</h4>
+				<i>{{description}}</i>
+				<hr/>
+			{{/each}}
+		</div>
+    </div>
+</script>
+
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/storage/memory-store.js"></script>
+
+<script src="js/HomeView.js"></script>
+<script src="js/OrderView.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="phonegap.js"></script>
+
+</body>
+</html>

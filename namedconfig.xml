@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "org.gezel.mamanita"
+        versionCode = "10"
+        version     = "1.1.0">
+ 
+    <name>Mamanita Order App</name>
+ 
+    <description>
+		Check open orders, and double check product numbers by scanning barcode
+    </description>
+ 
+    <author href="http://mamanita.be" email="spleethoven@gmail.com">
+		Sandor Gezel
+    </author>
+ 
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/notification"/>
+ 
+</widget>
